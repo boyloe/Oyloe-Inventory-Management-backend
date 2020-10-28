@@ -22,6 +22,10 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
             response.json(result)
             })   
     })
+
+    app.post('/products', (request, response) => {
+        db.collection('products').insertOne(request.body)
+    })
 })
 
 app.listen(port)
