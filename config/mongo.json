@@ -1,0 +1,13 @@
+{
+    "development": {
+      "database": "siteInventory",
+      "host": "localhost"
+    },
+    "test": {
+      "database": "siteInventory",
+      "host": "localhost"
+    },
+    "production": {
+      "use_env_variable": "MONGODB_URI"
+    }
+  }
