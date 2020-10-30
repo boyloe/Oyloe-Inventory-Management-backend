@@ -3,16 +3,13 @@ const app = express()
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const dbName = 'siteInventory'
-const dbURL = 'mongodb://localhost:27017/animals'
+const dbURL = 'mongodb+srv://BryLow:bryan123@cluster0.fffht.mongodb.net/siteInventory?retryWrites=true&w=majority'
 const cors = require('cors')
-
-
 const port = process.env.PORT||4000
 
 MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
     if (err) return console.log(err)
-    const db = client.db(dbName)
-    
+    const db = client.db(dbName)    
     
     app.use(cors())
     app.use(bodyParser.json())
@@ -24,8 +21,12 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
     })
 
     app.post('/products', (request, response) => {
-        db.collection('products').insertOne(request.body)
+        const product = request.body
+        db.collection('products').insertOne(product)
+        response.json(`${product.name} was created`)
     })
 })
+
+
 
 app.listen(port)
