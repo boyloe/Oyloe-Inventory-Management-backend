@@ -3,7 +3,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const MongoClient = require('mongodb').MongoClient
 const dbName = 'siteInventory'
-const dbURL = 'mongodb+srv://BryLow:bryan123@cluster0.fffht.mongodb.net/siteInventory?retryWrites=true&w=majority'
+const dbURL = process.env.dbURL
 const cors = require('cors')
 const port = process.env.PORT||4000
 
