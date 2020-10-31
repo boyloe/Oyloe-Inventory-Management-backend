@@ -1,0 +1,82 @@
+[
+    {
+    "_id": "5f9ca311a6eb3b0017f01c6f",
+    "name": "CyberMul",
+    "description": "Emulsifier",
+    "package": "drum",
+    "weight": 425,
+    "quantity": 4
+    },
+    {
+    "_id": "5f9d8f638b959a00176f802a",
+    "name": "NewWate",
+    "description": "Weighting Agent",
+    "package": "Sack",
+    "weight": 100,
+    "quantity": 40
+    },
+    {
+    "_id": "5f9d8fca8b959a00176f802b",
+    "name": "Lime",
+    "description": "pH Control",
+    "package": "Sack",
+    "weight": 50,
+    "quantity": 50
+    },
+    {
+    "_id": "5f9d90228b959a00176f802c",
+    "name": "Calcium Chloride",
+    "description": "Brine Additive",
+    "package": "Sack",
+    "weight": 50,
+    "quantity": 49
+    },
+    {
+    "_id": "5f9d907e8b959a00176f802d",
+    "name": "CyberCoat",
+    "description": "Wetting Agent",
+    "package": "Drum",
+    "weight": 425,
+    "quantity": 4
+    },
+    {
+    "_id": "5f9d93548b959a00176f802e",
+    "name": "CyberSeal",
+    "description": "Lost Circulation Material ",
+    "package": "Drum",
+    "weight": 425,
+    "quantity": 4
+    },
+    {
+    "_id": "5f9d936e8b959a00176f802f",
+    "name": "CyberTrol",
+    "description": "HTHP Fluid Loss Additive",
+    "package": "Drum",
+    "weight": 425,
+    "quantity": 4
+    },
+    {
+    "_id": "5f9d93a98b959a00176f8030",
+    "name": "CyberVis",
+    "description": "Polymeric Rheological Modifier",
+    "package": "Drum",
+    "weight": 425,
+    "quantity": 4
+    },
+    {
+    "_id": "5f9d93f98b959a00176f8031",
+    "name": "NoFoam A",
+    "description": "Alcohol Based Defoamer",
+    "package": "Bucket",
+    "weight": 50,
+    "quantity": 32
+    },
+    {
+    "_id": "5f9d943c8b959a00176f8032",
+    "name": "DynaFiber",
+    "description": "Micronized Cellulose Fibers",
+    "package": "Sack",
+    "weight": 50,
+    "quantity": 50
+    }
+    ]
