@@ -26,7 +26,12 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
         response.json(`${newProduct.name} was created`)
     })
 
-
+    app.get('/deliveries', (request, response) => {
+        db.collection('deliveries').find().toArray((err, result) => {
+            if (err) throw err
+            response.json(result)
+            })   
+    })
 
     app.post('/deliveries', (request, response) => {
         const newDelivery = request.body
