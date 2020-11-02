@@ -21,10 +21,19 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
     })
 
     app.post('/products', (request, response) => {
-        const product = request.body
-        db.collection('products').insertOne(product)
-        response.json(`${product.name} was created`)
+        const newProduct = request.body
+        db.collection('products').insertOne(newProduct)
+        response.json(`${newProduct.name} was created`)
     })
+
+
+
+    app.post('/deliveries', (request, response) => {
+        const newDelivery = request.body
+        db.collection('deliveries').insertOne(newDelivery)
+        response.json(`${newDelivery} was created with ${newDelivery.productsDelivered}`)
+    })
+
 })
 
 
