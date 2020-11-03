@@ -13,6 +13,7 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
     
     app.use(cors())
     app.use(bodyParser.json())
+    
     app.get('/products', (request, response) => {
         db.collection('products').find().toArray((err, result) => {
             if (err) throw err
@@ -26,6 +27,8 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
         response.json(`${newProduct.name} was created`)
     })
 
+    //app.patch/put to products to update quantities, figure out how to keep existing data and only update quantity. 
+
     app.get('/deliveries', (request, response) => {
         db.collection('deliveries').find().toArray((err, result) => {
             if (err) throw err
@@ -38,6 +41,8 @@ MongoClient.connect(dbURL, {useUnifiedTopology: true }, (err, client) => {
         db.collection('deliveries').insertOne(newDelivery)
         response.json(`${newDelivery} was created with ${newDelivery.productsDelivered}`)
     })
+
+    //Need to create get/post for dailyUsage(maybe a better name)
 
 })
 
